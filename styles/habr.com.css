@@ -1,8 +1,10 @@
 @-moz-document domain("habr.com") {
 :root {
-    --bg-silver-50: #f0f4f9;
-    --bg-silver-100: #e6eaf0;
-    --bg-silver-200: #dee3e8;
+    --bg-color-50: hsl(213, 30%, 96%);
+    --bg-color-100: hsl(213, 30%, 93%);
+    --bg-color-200: hsl(213, 30%, 90%);
+    --bg-color-300: hsl(213, 30%, 87%);
+    --bg-blockquote: hsl(63, 33%, 90%);
 }
 
 /* Ширина разметки */
@@ -27,13 +29,10 @@
     padding: 0;
 }
 
-/* Переделать полностью таблицу !!!! */
-
 /* Таблица */
-
 .post__text-html table {
 /*     overflow: hidden; */
-    border: 2px solid var(--bg-silver-200);
+    border: 2px solid var(--bg-color-200);
     border-radius: 6px;
     border-collapse: separate;
     border-spacing: 0px 0px;
@@ -43,7 +42,7 @@
 }
 
 .post__text-html table thead {
-    background-color: var(--bg-silver-200);
+    background-color: var(--bg-color-200);
 }
 
 .post__text-html table thead th:first-child {
@@ -67,23 +66,23 @@
 }
 
 .post__text-html table tr:nth-child(2n) {
-    background-color: var(--bg-silver-50);
+    background-color: var(--bg-color-50);
 }
 .post__text-html table tr:hover {
-    background-color: var(--bg-silver-200);
+    background-color: var(--bg-color-200);
 }
 
 
 /* Исходный код */
 code, kbd, samp {
-    background-color: var(--bg-silver-100);
+    background-color: var(--bg-color-100);
     padding: 2px 4px 0px 4px;
     border-radius: 2px;
 }
 
 .post__text-html pre code {
     padding: 6px 14px 4px 14px;
-    background-color: var(--bg-silver-100);
+    background-color: var(--bg-color-100);
     border-radius: 4px;
     font-size: 0.9em;
 }
@@ -103,15 +102,15 @@ code, kbd, samp {
 /* Спец блоки на страницах */
 .new-block,
 .promo-block {
-    background-color: var(--bg-silver-100);
+    background-color: var(--bg-color-100);
     padding: 17px;
     border-radius: 4px;
 }
 .default-block {
-    background-color: var(--bg-silver-50);
+    background-color: var(--bg-color-50);
 }
 .promo-item:hover {
-    background-color: var(--bg-silver-200);
+    background-color: var(--bg-color-200);
 }
 .content-list__item_promo {
     padding: 0px;
@@ -134,6 +133,19 @@ code, kbd, samp {
 .post__tags {
     margin: 0px 0px 6px;
 }
+.layout__elevator {
+    color: var(--bg-color-200);
+}
+.layout__elevator:hover {
+    background-color: var(--bg-color-50);
+    color: var(--bg-color-300);
+}
+
+.post__text-html blockquote {
+    background-color: var(--bg-blockquote);
+    border-radius: 4px;
+/*     font-style: italic; */
+}
 
 /*  Навигация. Меняем символ ^ на emoji
     https://stackoverflow.com/questions/47221792/change-link-text-with-css/47221912#47221912
@@ -152,7 +164,7 @@ h3 > a[href="#navigaciya"]::before,
 h4 > a[href="#navigaciya"]::before,
 h5 > a[href="#navigaciya"]::before,
 h6 > a[href="#navigaciya"]::before {
-    content: '';
+    content: '🔺';
     visibility: visible;
     text-decoration: none;
 }
@@ -164,7 +176,6 @@ h4 > a[href="#navigaciya"]:hover,
 h5 > a[href="#navigaciya"]:hover,
 h6 > a[href="#navigaciya"]:hover {
     text-decoration: none;
-    background-color: blue;
     text-shadow: 1px 1px 2px #df3939;
 }
 }
