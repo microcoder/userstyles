@@ -19,7 +19,6 @@
 .post__text-html ol ol {
     margin-top: 0px;
 }
-
 .post__text-html ul li,
 .post__text-html ul ul li,
 .post__text-html ul ol li,
@@ -40,11 +39,9 @@
     margin: 0 auto 0 auto;
     width: auto;
 }
-
 .post__text-html table thead {
     background-color: var(--bg-color-200);
 }
-
 .post__text-html table thead th:first-child {
     border-top-left-radius: 5px;
 }
@@ -57,14 +54,12 @@
 .post__text-html table tbody tr:last-child td:last-child {
     border-bottom-right-radius: 5px;
 }
-
 .post__text-html table td,
 .post__text-html table th {
     border: 0px;
     padding: 4px 10px 4px 10px;
     font-size: 0.9em;
 }
-
 .post__text-html table tr:nth-child(2n) {
     background-color: var(--bg-color-50);
 }
@@ -140,11 +135,13 @@ code, kbd, samp {
     background-color: var(--bg-color-50);
     color: var(--bg-color-300);
 }
-
 .post__text-html blockquote {
     background-color: var(--bg-blockquote);
     border-radius: 4px;
 /*     font-style: italic; */
+}
+.post__text-html img {
+    padding: 20px 0px 20px 0px;
 }
 
 /*  Навигация. Меняем символ ^ на emoji
